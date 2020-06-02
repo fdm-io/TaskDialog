@@ -4,10 +4,24 @@
     <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
     <AssemblyName>TaskDialog</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageId>TaskDialog</PackageId>
+    <PackageId>KPreisser.UI.TaskDialog</PackageId>
     <RootNamespace>KPreisser.UI</RootNamespace>
     <LangVersion>7.3</LangVersion>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Konstantin Preißer</Authors>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Description>The Task Dialog is the successor of a MessageBox and available starting with Windows Vista. For more information, see About Task Dialogs.
+
+This project aims to provide a complete .NET implementation (C#) of the Task Dialog with all the features that are also available in the native APIs, with all the marshalling and memory management done under the hood.</Description>
+    <PackageReleaseNotes>This repository is now archived as the task dialog is expected to be included with a future .NET Core (WinForms) version and the work is now done in the PR (https://github.com/dotnet/winforms/pull/1133).</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/kpreisser/TaskDialog</PackageProjectUrl>
+    <Copyright>﻿Copyright (c) 2018 Konstantin Preißer, www.preisser-it.de</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/fdm-io/TaskDialog.git</RepositoryUrl>
+    <Product>KPreisser.UI</Product>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>true</IncludeSymbols>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -35,5 +49,12 @@
 
   <ItemGroup Condition="'$(TargetFramework)'=='net472'">
     <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>
